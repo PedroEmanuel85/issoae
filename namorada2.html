@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Minha Namorada 💖</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #FFC0CB;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #FF69B4;
+        }
+
+        #message {
+            font-size: 1.2em;
+            color: #333;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+
+        #nextBtn {
+            background-color: #FF69B4;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #nextBtn:hover {
+            background-color: #FF1493;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Oi, meu amor! 💖</h1>
+        <p id="message">Clique no botão para ler algo especial...</p>
+        <button id="nextBtn">Clique aqui</button>
+    </div>
+
+    <script>
+        const messages = [
+            "Você é o amor da minha vida, e sou muito grato por Deus ter te colocado na minha vida!",
+            "Voçe é uma garota unica, e quero estar ao seu lado em cada momento!",
+            "Você é minha inspiração e minha felicidade! 💖",
+            "Eu te amo mais a cada dia, e isso nunca vai mudar!",
+            "Obrigado por ser exatamente quem você é para mim, minha companheira perfeita! 💞"
+        ];
+
+        let index = 0;
+
+        document.getElementById("nextBtn").addEventListener("click", function() {
+            document.getElementById("message").innerText = messages[index];
+            index = (index + 1) % messages.length;
+        });
+    </script>
+</body>
+</html>
